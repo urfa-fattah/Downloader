@@ -1,0 +1,131 @@
+Based on the "Array , Multidimensional Arrays, String, Pointers" source, here are the seven numbered code examples (Examples 1 through 7) found in the latter portion of that document, which likely correspond to pages 15–21 [1-4].
+
+### **1. Store and Print 5 Numbers (Example 1)**
+This program demonstrates how to initialize a one-dimensional array and print its elements using a `for` loop [1].
+
+```c
+#include <stdio.h> 
+
+int main() {     
+    int num[1] = {10,20,30,40,50};     
+    int i;
+    for(i=0; i<5; i++) {         
+        printf("%d ", num[i]);     
+    }
+    return 0; 
+}
+```
+
+### **2. Take Input from User and Print (Example 2)**
+This program shows how to use `scanf` within a loop to populate an array with user-provided integers [1, 2].
+
+```c
+#include <stdio.h>
+int main() {
+    int num[1];
+    int i;
+    printf("Enter 5 numbers:\n");
+    for(i=0; i<5; i++) {
+        scanf("%d", &num[i]);
+    }
+    printf("You entered:\n");
+    for(i=0; i<5; i++) {
+        printf("%d ", num[i]);
+    }
+    return 0;
+}
+```
+
+### **3. Find Sum of Array Elements (Example 3)**
+This example demonstrates how to iterate through an array to calculate the total sum of its elements [2].
+
+```c
+#include <stdio.h> 
+
+int main() {     
+    int num[1] = {2,4,6,8,10};     
+    int i, sum=0;
+    for(i=0; i<5; i++) {         
+        sum = sum + num[i];     
+    }
+    printf("Sum = %d", sum);
+    return 0; 
+}
+```
+
+### **4. Find Largest Number in Array (Example 4)**
+This program identifies the maximum value in an array by comparing each element against a current maximum [2, 3].
+
+```c
+#include <stdio.h>
+int main() {
+    int num[1] = {12,7,25,9,15};
+    int i, max;
+    max = num;
+    for(i=1; i<5; i++) {
+        if(num[i] > max) {
+            max = num[i];
+        }
+    }
+    printf("Largest = %d", max);
+    return 0;
+}
+```
+
+### **5. Print Array in Reverse Order (Example 5)**
+This code illustrates how to print array elements backwards by initializing the loop counter to the last index (`4`) and decrementing it [3].
+
+```c
+#include <stdio.h>
+int main() {
+    int num[1] = {1,2,3,4,5};
+    int i;
+    for(i=4; i>=0; i--) {
+        printf("%d ", num[i]);
+    }
+    return 0;
+}
+```
+
+### **6. Print Fixed 2D Array (Example 6)**
+This program uses nested loops to print a predefined 2x3 matrix (two-dimensional array) [3].
+
+```c
+#include <stdio.h>
+int main() {
+    int a[5][6] = {{1,2,3},{4,5,6}};
+    int i,j;
+    for(i=0; i<2; i++) {
+        for(j=0; j<3; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+### **7. Take Input and Print Matrix (Example 7)**
+This example demonstrates taking user input for a 2x2 matrix and then displaying it in a table-like format [4].
+
+```c
+#include <stdio.h>
+int main() {
+    int a[5];
+    int i,j;
+    printf("Enter 4 numbers:\n");
+    for(i=0; i<2; i++) {
+        for(j=0; j<2; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Matrix is:\n");
+    for(i=0; i<2; i++) {
+        for(j=0; j<2; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
