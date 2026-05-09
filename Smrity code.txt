@@ -1,0 +1,288 @@
+C programme codes- For lab report,
+Jehetu sbr user name different thakte hbe. Akhane sb code gula diye dilm topic wise. Phone ea C programme er jeknw apps download kore code gulo copy-paste kore Kaj kora jbe,ba Laptop eao kora jbe. 
+@everyone 
+
+1. Program to Calculate Square Using Function
+
+#include <stdio.h>
+
+void calculateSquare(int number){
+    int square = number * number;
+    printf("Square of %d is %d\n", number, square);
+}
+
+int main(){
+    calculateSquare(5);
+    return 0;
+}
+
+
+2. Program to Find Sum Using Function
+
+#include <stdio.h>
+
+int Sum(int number1, int number2){
+    int sum = number1 + number2;
+    return sum;
+}
+
+int main(){
+    int result = Sum(5, 3);
+    printf("Sum = %d", result);
+    return 0;
+}
+
+3. Program to Calculate Square of a Number
+
+#include <stdio.h>
+
+void calculateSquare(int number){
+    printf("Square of the number = %d", number * number);
+}
+
+int main(){
+    calculateSquare(4);
+    return 0;
+}
+
+4. Program for Multiplication Using Function
+
+#include <stdio.h>
+
+int Multiplication(int number1, int number2){
+    return number1 * number2;
+}
+
+int main(){
+    int multi = Multiplication(2, 3);
+    printf("Multiplication = %d", multi);
+    return 0;
+}
+
+
+5. Program to Print Array Elements
+
+#include <stdio.h>
+
+int main(){
+    int array[4] = {10, 20, 30, 40};
+    int i;
+
+    for(i = 0; i < 4; i++){
+        printf("%d\n", array[i]);
+    }
+
+    return 0;
+}
+
+6. Program to Take Input in Array and Print
+
+#include <stdio.h>
+
+int main(){
+    int num[5];
+    int i;
+
+    printf("Enter 5 numbers:\n");
+
+    for(i = 0; i < 5; i++){
+        scanf("%d", &num[i]);
+    }
+
+    printf("You entered:\n");
+
+    for(i = 0; i < 5; i++){
+        printf("%d\n", num[i]);
+    }
+
+    return 0;
+}
+
+7. Program to Check Even or Odd
+
+#include <stdio.h>
+
+void checkEvenOdd(int num){
+    if(num % 2 == 0)
+        printf("Even");
+    else
+        printf("Odd");
+}
+
+int main(){
+    checkEvenOdd(7);
+    return 0;
+}
+
+8. Program to Find Square Using Return Function
+
+#include <stdio.h>
+
+int square(int n){
+    return n * n;
+}
+
+int main(){
+    printf("%d", square(4));
+    return 0;
+}
+
+9. Program to Find Factorial Using Function
+
+#include <stdio.h>
+
+int factorial(int n){
+    int i, fact = 1;
+
+    for(i = 1; i <= n; i++){
+        fact *= i;
+    }
+
+    return fact;
+}
+
+int main(){
+    printf("Factorial = %d", factorial(5));
+    return 0;
+}
+
+
+10. Program to Find Largest Number Among Three Numbers
+
+#include <stdio.h>
+
+int largest(int a, int b, int c){
+    if(a > b && a > c)
+        return a;
+    else if(b > c)
+        return b;
+    else
+        return c;
+}
+
+int main(){
+    printf("Largest = %d", largest(5, 9, 3));
+    return 0;
+}
+
+11. Recursive Factorial Program
+
+#include <stdio.h>
+
+int factorial(int n){
+    if(n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main(){
+    printf("Factorial = %d", factorial(5));
+    return 0;
+}
+
+12. Program to Swap Two Numbers Using Function
+
+#include <stdio.h>
+
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main(){
+    int x = 5, y = 10;
+
+    swap(&x, &y);
+
+    printf("x = %d, y = %d", x, y);
+
+    return 0;
+}
+
+13. Recursive Fibonacci Series Program
+
+#include <stdio.h>
+
+int fib(int n){
+    if(n == 0)
+        return 0;
+
+    if(n == 1)
+        return 1;
+
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main(){
+    printf("%d", fib(6));
+    return 0;
+}
+
+14. Program to Find Largest Number in an Array
+
+#include <stdio.h>
+
+int main(){
+    int num[5] = {12, 4, 56, 7, 24};
+    int i, max;
+
+    max = num[0];
+
+    for(i = 1; i < 5; i++){
+        if(num[i] > max){
+            max = num[i];
+        }
+    }
+
+    printf("Largest = %d", max);
+
+    return 0;
+}
+
+15. Program to Print Fixed 2D Array
+
+#include <stdio.h>
+
+int main(){
+    int a[2][3] = {{1,2,3},{4,5,6}};
+    int i, j;
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 3; j++){
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+16. Program to Take Input and Print Matrix
+
+#include <stdio.h>
+
+int main(){
+    int a[2][2];
+    int i, j;
+
+    printf("Enter 4 numbers:\n");
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 2; j++){
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("Matrix is:\n");
+
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 2; j++){
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
